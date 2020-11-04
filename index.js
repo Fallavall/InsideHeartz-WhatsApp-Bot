@@ -4,6 +4,10 @@ const venom = require('venom-bot')
 const yts = require("./lib/cmd.js");
 const axios = require("axios");
 const imageToBase64 = require('image-to-base64');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`App is running on port ${ PORT }`);
+});
 venom.create().then((client) => start(client))
 
 function start(client) {
